@@ -101,7 +101,7 @@ statusbar = {
 
 settings = {
   core = {
-    real_name = "";
+    real_name = "Unknown";
     user_name = "finiks";
     nick = "finiks";
     awaylog_file = "/dev/null";
