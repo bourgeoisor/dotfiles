@@ -1,0 +1,4 @@
+set imap_user=bourgeoisor@gmail.com
+set folder=imaps://bourgeoisor@imap.gmail.com
+set spoolfile=+INBOX
+set imap_check_subscribed

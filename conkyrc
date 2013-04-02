@@ -1,0 +1,45 @@
+alignment bottom_middle
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color 666666
+default_outline_color 222222
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont profont:size=10
+gap_x 5
+gap_y 0
+minimum_size 1920 6
+maximum_width 1920
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window_class Conky
+own_window_type override
+own_window_transparent no
+own_window_colour 111111
+own_window yes
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer left
+show_graph_scale no
+show_graph_range no
+format_human_readable yes
+
+color1 666666
+color2 888888
+color3 444444
+
+mpd_host 127.0.0.1
+
+TEXT
+${alignc}${color1}wlan0 [${color3}${addr wlan0}${color1}]${color}: ${color3}Up:${color1} ${upspeed wlan0} ${color3} - Down:${color1} ${downspeed wlan0}     \
+${color3}CPU: ${color1} ${cpu}% ${cpubar cpu0 5,50}  ${color}| \
+${color3}RAM:${color1} ${memperc}% ${membar 5,50}  ${color}| \
+${color3}Battery:${color1} ${battery_percent}% ${battery_bar 5,50}

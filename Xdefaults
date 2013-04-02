@@ -1,0 +1,25 @@
+#include "/home/finiks/.config/termcolors/clover"
+urxvt.backgroundPixmap: /home/finiks/pictures/patt_linen.png\;style=tiled
+urxvt.scrollBar_right:  false
+urxvt.scrollBar:        false
+urxvt.borderLess:       false
+urxvt.colorMode:        on
+urxvt.cursorBlink:      true
+urxvt.internalBorder:   5
+urxvt.transparent:      false
+urxvt.shading:          10
+urxvt.borderColor:      #2C2C2C
+urxvt.background:       #2C2C2C
+urxvt.foreground:       #BCBCAF
+
+urxvt.urgentOnBell:     true
+
+urxvt.font:             xft:Terminus:size=9
+
+urxvt.inputMethod:      ibus
+urxvt.preeditType:      OverTheSpot
+
+urxvt.perl-ext-common:  default,matcher
+urxvt.urlLauncher:      firefox
+urxvt.matcher.button:   2
+urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
