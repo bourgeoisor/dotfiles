@@ -28,6 +28,7 @@ source /home/finiks/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Custom aliases.
 alias ls="ls -Fh --color --group-directories-first"
+alias tree="tree -C"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
