@@ -14,6 +14,8 @@ runtime! archlinux.vim
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
+au BufNewFile,BufRead *.fnks              setf fnks
+
 set nocompatible
 filetype off
 call pathogen#helptags()
