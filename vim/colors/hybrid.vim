@@ -83,7 +83,7 @@ if has("gui_running")
   let s:changefg = "#d7d7ff"
 else
   let s:vmode = "cterm"
-  let s:background = "234"
+  let s:background = "none"
   let s:window = "236"
   let s:darkcolumn = "234"
   let s:addbg = "65"

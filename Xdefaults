@@ -1,5 +1,5 @@
 #include "/home/finiks/.config/termcolors/clover"
-urxvt.backgroundPixmap: /home/finiks/pictures/patt_linen.png\;style=tiled
+urxvt.backgroundPixmap: /home/finiks/pictures/patt_skewed.png\;style=tiled
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
 urxvt.borderLess:       false
