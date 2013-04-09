@@ -14,7 +14,7 @@ theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#b3b3b3"
 theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#5CC0D6"
+theme.fg_urgent     = "#54c0d0"
 theme.fg_minimize   = "#ffffff"
 
 theme.border_width  = 3
@@ -72,7 +72,7 @@ theme.titlebar_maximized_button_focus_inactive  = "/home/finiks/.config/awesome/
 theme.titlebar_maximized_button_normal_active = "/home/finiks/.config/awesome/themes/default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/home/finiks/.config/awesome/themes/default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/finiks/pictures/wall_cirno.png"
+theme.wallpaper = "/home/finiks/pictures/wall_acc.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/home/finiks/.config/awesome/themes/default/layouts/fairhw.png"
