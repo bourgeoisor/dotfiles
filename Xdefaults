@@ -1,4 +1,4 @@
-#include "/home/finiks/.config/termcolors/tomorrow"
+#include "/home/finiks/.config/termcolors/latenight"
 urxvt.backgroundPixmap: /home/finiks/pictures/patt_skewed.png\;style=tiled
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
