@@ -15,6 +15,7 @@ syn match fnksKeyGreen  "C"         contained
 syn match fnksKeyBlue   "P"         contained
 syn match fnksKeyRed    "S"         contained
 syn match fnksKeyOrange "U"         contained
+syn keyword fnksKeyPgreen  SU MO TU WE TH FR SA
 
 syn match fnksURL       "http[^ ]*" 
 syn match fnksComment   "\*.*"      skipwhite
@@ -32,6 +33,7 @@ let b:current_syntax = "fnks"
 hi def link fnksKeyGreen    Special
 hi def link fnksKeyBlue     Underlined
 hi def link fnksKeyRed      Constant
+hi def link fnksKeyPgreen   Todo
 hi def link fnksKeyOrange   Type
 hi def link fnksURL         Statement
 hi def link fnksComment     Comment
