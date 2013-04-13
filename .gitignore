@@ -11,6 +11,7 @@ config/pulse
 config/ranger
 config/rncbc.org
 config/teamviewer8
+config/Trolltech.conf
 
 ncmpcpp/artists
 ncmpcpp/error.log
