@@ -9,6 +9,11 @@ autoload -U zmv
 autoload -U promptinit && promptinit
 autoload -U colors && colors
 
+# Bell activates whenever a command is done running.
+function precmd() {
+    echo -n "\a"
+}
+
 # Customizes the prompt.
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
@@ -17,7 +22,7 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 PROMPT='%{$fg[gray]%}┌─[%{$fg_bold[yellow]%}%~%{$reset_color$fg[gray]%}]\
         $(git_prompt_info "[$fg_bold[red]%s$reset_color$fg[gray]]")
-└─╼%{$reset_color%} '
+└─╼%{$reset_color%} %'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
@@ -56,6 +61,8 @@ alias sd="sudo shutdown now -h"
 alias key="sudo umount /dev/sdb1"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias ducks="du -cksh * | sort -rn|head -11"
+
+alias deercoin="/home/finiks/code/script/deercoin"
 
 # Launch at the start of the terminal.
 ~/bin/todo
