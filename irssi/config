@@ -19,9 +19,9 @@ chatnets = {
   bitlbee = { type = "IRC"; };
 };
 
-channels = (
-  { name = "#archlinux"; chatnet = "freenode"; autojoin = "Yes"; }
-);
+#channels = (
+#  { name = "#archlinux"; chatnet = "freenode"; autojoin = "Yes"; }
+#);
 
 aliases = {
   J = "join";
@@ -42,7 +42,7 @@ aliases = {
 
 statusbar = {
   items = {
-    time = "{sb $Z}       ";
+    time = "{sb $Z} ";
     window = ":: {sb [$winref] $tag $itemname} ";
     window_empty = ":: {sb [$winref] $tag $itemname} ";
 
@@ -163,18 +163,18 @@ windows = {
       }
     );
   };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#archlinux";
-        tag = "freenode";
-      }
-    );
-  };
+  # 4 = {
+  #   items = (
+  #     {
+  #       type = "CHANNEL";
+  #       chat_type = "IRC";
+  #       name = "#archlinux";
+  #       tag = "freenode";
+  #     }
+  #   );
+  # };
 };
-mainwindows = {
-  1 = { first_line = "6"; lines = "49"; };
-  2 = { first_line = "1"; lines = "5"; };
-};
+#mainwindows = {
+#  1 = { first_line = "6"; lines = "49"; };
+#  2 = { first_line = "1"; lines = "5"; };
+#};
