@@ -16,6 +16,8 @@ config/Trolltech.conf
 ncmpcpp/artists
 ncmpcpp/error.log
 
+vim/.netrwhist
+
 irssi/logs
 irssi/sasl.auth
 irssi/saved_colors
