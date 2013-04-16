@@ -62,7 +62,7 @@ alias key="sudo umount /dev/sdb1"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias ducks="du -cksh * | sort -rn|head -11"
 
-alias coin="/home/finiks/dev/script/deercoin"
+alias coin="/home/finiks/dev/script/deercoin.py"
 
 # Launch at the start of the terminal.
 ~/bin/todo
