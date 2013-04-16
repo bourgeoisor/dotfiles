@@ -5,7 +5,7 @@ urxvt.scrollBar:        false
 urxvt.borderLess:       false
 urxvt.colorMode:        on
 urxvt.cursorBlink:      true
-urxvt.internalBorder:   5
+urxvt.internalBorder:   2
 urxvt.transparent:      false
 urxvt.shading:          10
 urxvt.borderColor:      #2C2C2C
