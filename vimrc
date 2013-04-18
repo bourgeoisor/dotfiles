@@ -35,6 +35,7 @@ set scrolljump=5        "Lines to scroll when cursor leaves window
 set scrolloff=3         "Minimum lines to keep above and below cursor
 
 set nocp
+set t_vb=
 filetype plugin on
 
 set nocompatible
