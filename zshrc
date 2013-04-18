@@ -11,7 +11,7 @@ autoload -U colors && colors
 
 # Bell activates whenever a command is done running.
 function precmd() {
-    echo -n "\a"
+    #echo -n "\a"
 }
 
 # Customizes the prompt.
@@ -63,6 +63,8 @@ alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.
 alias ducks="du -cksh * | sort -rn|head -11"
 
 alias coin="/home/finiks/dev/script/deercoin.py"
+
+alias gandi="sftp 20024@sftp.dc1.gpaas.net"
 
 # Launch at the start of the terminal.
 ~/bin/todo
