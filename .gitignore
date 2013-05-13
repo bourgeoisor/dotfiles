@@ -11,6 +11,7 @@ config/MusicBrainz
 config/pulse
 config/ranger
 config/rncbc.org
+config/Skype
 config/teamviewer8
 config/Trolltech.conf
 
