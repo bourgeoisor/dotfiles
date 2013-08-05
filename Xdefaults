@@ -1,5 +1,5 @@
 #include "/home/finiks/.config/termcolors/latenight"
-urxvt.backgroundPixmap: /home/finiks/pictures/patt_skewed.png\;style=tiled
+urxvt.backgroundPixmap: /home/finiks/pictures/patterns/skewed.png\;style=tiled
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
 urxvt.borderLess:       false
