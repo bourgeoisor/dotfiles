@@ -34,6 +34,7 @@ source /home/finiks/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Custom aliases.
 alias ls="ls -Fh --color --group-directories-first"
 alias tree="tree -C"
+alias manv="PAGER=vimpager man"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -68,3 +69,4 @@ alias gandi="sftp 20024@sftp.dc1.gpaas.net"
 
 # Launch at the start of the terminal.
 ~/bin/todo
+export PATH=$PATH:/home/finiks/bin
