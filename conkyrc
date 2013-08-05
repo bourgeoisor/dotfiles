@@ -39,7 +39,7 @@ color3 444444
 mpd_host 127.0.0.1
 
 TEXT
-${alignc}${color1}wlan0 [${color3}${addr wlan0}${color1}]${color}: ${color3}Up:${color1} ${upspeed wlan0} ${color3} - Down:${color1} ${downspeed wlan0}     \
+${alignc}${color1}wlp3s0 [${color3}${addr wlp3s0}${color1}]${color}: ${color3}Up:${color1} ${upspeed wlp3s0} ${color3} - Down:${color1} ${downspeed wlp3s0}     \
 ${color3}CPU: ${color1} ${cpu}% ${cpubar cpu0 5,50}  ${color}| \
 ${color3}RAM:${color1} ${memperc}% ${membar 5,50}  ${color}| \
 ${color3}Battery:${color1} ${battery_percent}% ${battery_bar 5,50}
