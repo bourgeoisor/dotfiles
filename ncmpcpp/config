@@ -1,6 +1,6 @@
 /* MPD Settings */
 mpd_crossfade_time = "3"
-mpd_music_dir = "/home/finiks/music"
+mpd_music_dir = "/mnt/local/music"
 
 /* Format */
 song_list_format = " $3%A $1»$7»$8» $8%t $R$5%l"
