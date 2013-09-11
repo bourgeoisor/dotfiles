@@ -47,7 +47,6 @@ alias pac-i="sudo pacman -Sy"
 alias pac-r="sudo pacman -R"
 
 alias metasploit="/opt/metasploit/msfconsole"
-alias skype="xhost +local: && su skype -c skype"
 alias mp="mplayer -ass -geometry 1280x720"
 
 alias ke0="echo 0 | sudo tee /sys/class/leds/asus\:\:kbd_backlight/brightness"
@@ -70,3 +69,4 @@ alias gandi="sftp 20024@sftp.dc1.gpaas.net"
 # Launch at the start of the terminal.
 ~/bin/todo
 export PATH=$PATH:/home/finiks/bin
+export SUDO_EDITOR=rvim
