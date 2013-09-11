@@ -1,7 +1,6 @@
 config/archey3.cfg
 config/chromium
 config/dconf
-config/dwb
 config/googlecl
 config/gtk-2.0
 config/htop
