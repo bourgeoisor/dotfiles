@@ -249,6 +249,7 @@ globalkeys = awful.util.table.join(
     -- Custom shortcuts
     awful.key({ modkey,           }, "F5",      function () os.execute("xbacklight -dec 20", false)                 end),
     awful.key({ modkey,           }, "F6",      function () os.execute("xbacklight -inc 20", false)                 end),
+    awful.key({ modkey,           }, "F7",      function () os.execute("sleep 1 && xset dpms force off", false)     end),
     awful.key({ modkey,           }, "F10",     function () os.execute("ncmpcpp toggle", false)                     end),
     awful.key({ modkey,           }, "F11",     function () os.execute("amixer -c 0 set Master 5- unmute", false)   end),
     awful.key({ modkey,           }, "F12",     function () os.execute("amixer -c 0 set Master 5+ unmute", false)   end),
