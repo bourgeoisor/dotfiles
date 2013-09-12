@@ -20,8 +20,9 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
-PROMPT='%{$fg[gray]%}┌─[%{$fg_bold[yellow]%}%~%{$reset_color$fg[gray]%}]\
-        $(git_prompt_info "[$fg_bold[red]%s$reset_color$fg[gray]]")
+PROMPT='
+%{$fg[gray]%}┌─[%{$fg_bold[yellow]%}%~%{$reset_color$fg[gray]%}]\
+    $(git_prompt_info "[$fg_bold[red]%s$reset_color$fg[gray]]")
 └─╼%{$reset_color%} %'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
@@ -38,8 +39,8 @@ alias manv="PAGER=vimpager man"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias docs="cd ~/documents/"
-alias notes="cd ~/notes/"
+alias dir755="find ./ -type d -exec chmod 755 {} +"
+alias files644="find ./ -type f -exec chmod 644 {} +"
 
 alias pac-s="sudo pacman -Ss"
 alias pac-u="sudo pacman -Syu"
