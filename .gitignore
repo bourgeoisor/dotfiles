@@ -1,6 +1,7 @@
 config/archey3.cfg
 config/chromium
 config/dconf
+config/fontconfig
 config/googlecl
 config/gtk-2.0
 config/htop
@@ -13,6 +14,12 @@ config/rncbc.org
 config/Skype
 config/teamviewer8
 config/Trolltech.conf
+
+mpd/database
+mpd/log
+mpd/pid
+mpd/state
+mpd/sticker.sql
 
 ncmpcpp/artists
 ncmpcpp/error.log
