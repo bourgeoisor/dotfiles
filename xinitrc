@@ -7,21 +7,26 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-#rehash the fonts
+# Rehash the fonts
 xset +fp /usr/share/fonts/local
 xset fp rehash
 setxkbmap -option grp:caps_toggle us,ca
 
-#launch conky
+# Launch conky
 conky
 
-#launch mpd
+# Launch mpd
 mpd &
 
-#disable the touchpad
+# Disable the touchpad
 synclient TouchpadOff=1
 
-#launch the input manager
+# Puts numlock on
+numlockx &
+
+# Launch the input manager
 #ibus-daemon --xim &
 
 exec awesome
+#sxhkd &
+#exec bspwm
