@@ -15,11 +15,13 @@ setxkbmap -option grp:caps_toggle us,ca
 #launch conky
 conky
 
+#launch mpd
+mpd &
+
 #disable the touchpad
 synclient TouchpadOff=1
 
 #launch the input manager
-ibus-daemon --xim &
+#ibus-daemon --xim &
 
-#launch awesomewm
 exec awesome
