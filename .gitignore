@@ -1,4 +1,9 @@
 config/archey3.cfg
+config/dwb/default
+config/dwb/greasemonkey
+config/dwb/userscripts
+config/dwb/mimetypes
+config/dwb/searchengines
 config/chromium
 config/dconf
 config/fontconfig
