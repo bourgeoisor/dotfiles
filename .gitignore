@@ -1,4 +1,5 @@
 config/archey3.cfg
+config/Bitcoin
 config/dwb/default
 config/dwb/greasemonkey
 config/dwb/userscripts
@@ -14,6 +15,7 @@ config/gtk-3.0
 config/htop
 config/ibus
 config/jack
+config/Mumble
 config/MusicBrainz
 config/pulse
 config/ranger
