@@ -48,7 +48,7 @@ alias pac-i="sudo pacman -Sy"
 alias pac-r="sudo pacman -R"
 
 alias metasploit="/opt/metasploit/msfconsole"
-alias mp="mplayer -ass -geometry 1280x720"
+alias mp="mplayer -ass -geometry 1280x720 -af scaletempo"
 
 alias ke0="echo 0 | sudo tee /sys/class/leds/asus\:\:kbd_backlight/brightness"
 alias ke2="echo 2 | sudo tee /sys/class/leds/asus\:\:kbd_backlight/brightness"
