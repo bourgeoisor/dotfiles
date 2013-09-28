@@ -12,6 +12,12 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 setxkbmap -option grp:caps_toggle us,ca
 
+# Cursor
+xsetroot -cursor_name left_ptr &
+
+# Background
+hsetroot -tile /home/finiks/pictures/wallpapers/nyaruko.png
+
 # Launch conky
 conky
 
@@ -27,6 +33,6 @@ numlockx &
 # Launch the input manager
 #ibus-daemon --xim &
 
-exec awesome
-#sxhkd &
-#exec bspwm
+# Launch bspwm
+sxhkd &
+exec bspwm
