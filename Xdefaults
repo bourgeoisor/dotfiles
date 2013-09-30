@@ -1,16 +1,17 @@
-#include "/home/finiks/.config/termcolors/latenight"
-urxvt.backgroundPixmap: /home/finiks/pictures/patterns/skewed.png\;style=tiled
+#include "/home/finiks/.config/termcolors/autumndusk"
+urxvt.backgroundPixmap: /home/finiks/pictures/patterns/skewed.png\;style=root-tiled
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
 urxvt.borderLess:       false
 urxvt.colorMode:        on
 urxvt.cursorBlink:      true
-urxvt.internalBorder:   2
+urxvt.internalBorder:   5
 urxvt.transparent:      false
-urxvt.shading:          10
-urxvt.borderColor:      #2C2C2C
-urxvt.background:       #2C2C2C
+urxvt.shading:          50
+urxvt.borderColor:      #121212
+urxvt.background:       #2E2E2E
 urxvt.foreground:       #BCBCAF
+urxvt.fading:           0
 
 urxvt.urgentOnBell:     true
 
