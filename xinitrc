@@ -37,7 +37,7 @@ synclient TouchpadOff=1
 numlockx &
 
 # Launch the input manager
-#ibus-daemon --xim &
+ibus-daemon --xim &
 
 # Launch bspwm
 sxhkd &

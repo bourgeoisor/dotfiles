@@ -15,13 +15,13 @@ urxvt.fading:           0
 
 urxvt.urgentOnBell:     true
 
-urxvt.font:             xft:Terminus:size=9
+urxvt.font:             xft:Terminus:size=9,xft:otf-ipafont:size=9
 
 urxvt.inputMethod:      ibus
 urxvt.preeditType:      OverTheSpot
 
 urxvt.perl-ext-common:  default,matcher
-urxvt.urlLauncher:      firefox
+urxvt.urlLauncher:      dwb
 urxvt.matcher.button:   2
 urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt.termName: rxvt
