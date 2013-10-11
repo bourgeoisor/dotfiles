@@ -24,9 +24,6 @@ compton -cCb -fD 2 -r r -o 0.5 -l 2 -t 2 &
 # Unclutter
 unclutter -grab -noevents -root &
 
-# Launch conky
-#conky
-
 # Launch mpd
 mpd &
 
