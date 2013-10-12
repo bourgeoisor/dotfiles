@@ -11,17 +11,22 @@ servers = (
     autoconnect = "yes";
   },
 
-  { address = "localhost"; chatnet = "bitlbee"; autoconnect = "yes"; }
+  {
+    address = "irc.rizon.net";
+    chatnet = "rizon";
+    port = "6697";
+    autoconnect = "yes";
+  },
 );
 
 chatnets = {
   freenode = { type = "IRC"; nick = "finiks"; };
-  bitlbee = { type = "IRC"; };
+  rizon = { type = "IRC"; };
 };
 
-#channels = (
-#  { name = "#archlinux"; chatnet = "freenode"; autojoin = "Yes"; }
-#);
+channels = (
+  { name = "#wanikani"; chatnet = "rizon"; autojoin = "Yes"; }
+);
 
 aliases = {
   J = "join";
@@ -153,16 +158,16 @@ logs = { };
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
   2 = { name = "hilight"; sticky = "no"; };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "&bitlbee";
-        tag = "bitlbee";
-      }
-    );
-  };
+  #3 = {
+  #  items = (
+  #    {
+  #      type = "CHANNEL";
+  #      chat_type = "IRC";
+  #      name = "#wanikani";
+  #      tag = "wanikani";
+  #    }
+  #  );
+  #};
   # 4 = {
   #   items = (
   #     {
