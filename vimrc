@@ -33,6 +33,7 @@ set nowrap              "Wrap long lines
 "set showmatch          "Show matching parenthesis
 set scrolljump=5        "Lines to scroll when cursor leaves window
 set scrolloff=3         "Minimum lines to keep above and below cursor
+set backspace=2         "The backspace in insert mode works
 
 set nocp
 set t_vb=
