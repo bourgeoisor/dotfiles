@@ -1,20 +1,7 @@
-" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
-" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
-" you can find below.  If you wish to change any of those settings, you should
-" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing archlinux.vim since it alters the value of the
-" 'compatible' option.
-
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages.
 runtime! archlinux.vim
 
-" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
-" Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
-" and configure vim to your own liking!
-
 au BufNewFile,BufRead *.fnks              setf fnks
+au BufNewFile,BufRead *.todo              setf todo
 
 set nocompatible
 filetype off
@@ -22,23 +9,51 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
-syntax on               "Syntax on
-set number              "Show line number
-set tabstop=4           "Indent is 4 spaces
-set shiftwidth=4        "Indent is 4 spaces
-set expandtab           "Tabs are spaces, not tabs
-"set smartindent         "Indent  automatically
-set softtabstop=4       "Let backspace delete indent
-set nowrap              "Wrap long lines
-"set showmatch          "Show matching parenthesis
-set scrolljump=5        "Lines to scroll when cursor leaves window
-set scrolloff=3         "Minimum lines to keep above and below cursor
-set backspace=2         "The backspace in insert mode works
+syntax on
+set number
+set ruler
+set autoread
+set lazyredraw
 
+" Whitespace
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Moving around
+set scrolljump=5
+set scrolloff=3
+set backspace=2
+
+" Matching brackets
+set showmatch
+set mat=2
+
+" Nevermind backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+function s:setWrapping()
+    set wrap
+    set wm=2
+    set textwidth=72
+endfunction
+
+au BufNewFile,BufRead *.txt call s:setWrapping()
+
+" Misc
 set nocp
 set t_vb=
 filetype plugin on
-
 set nocompatible
 set laststatus=2
 set encoding=utf-8
