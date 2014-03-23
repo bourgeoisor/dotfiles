@@ -1,7 +1,6 @@
 runtime! archlinux.vim
 
 au BufNewFile,BufRead *.fnks              setf fnks
-au BufNewFile,BufRead *.todo              setf todo
 
 set nocompatible
 filetype off
@@ -58,6 +57,8 @@ set nocompatible
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
+
+map <F2> :NERDTreeToggle<CR>
 
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
