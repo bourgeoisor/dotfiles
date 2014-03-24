@@ -60,6 +60,8 @@ set t_Co=256
 
 map <F2> :NERDTreeToggle<CR>
 
+autocmd FileType html,ruby,eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 
