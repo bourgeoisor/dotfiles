@@ -16,13 +16,10 @@ setxkbmap -option grp:caps_toggle us,ca
 xsetroot -cursor_name left_ptr &
 
 # Background
-hsetroot -tile /home/finiks/pictures/wallpapers/remilia.png
+hsetroot -tile /home/finiks/pictures/wallpapers/nyaruko.png
 
 # Compton
 compton -cCb -fD 2 -r r -o 0.5 -l 2 -t 2 &
-
-# Unclutter
-unclutter -grab -noevents -root &
 
 # Launch mpd
 mpd &
