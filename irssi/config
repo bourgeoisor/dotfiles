@@ -2,27 +2,17 @@
 
 servers = (
   {
-    address = "irc.freenode.net";
-    chatnet = "freenode";
-    port = "6697";
-    use_ssl = "yes";
-    ssl_verify = "yes";
-    ssl_capath = "/etc/ssl/certs/";
-    autoconnect = "yes";
-  },
-
-  {
-    address = "irc.rizon.net";
+    address = "162.243.226.199";
     chatnet = "rizon";
-    port = "6697";
+    port = "5000";
+    ssl_verify = "no";
+    use_ssl = "yes";
     autoconnect = "yes";
-  },
+    user_name = "finiks";
+  }
 );
 
-chatnets = {
-  freenode = { type = "IRC"; nick = "finiks"; };
-  rizon = { type = "IRC"; };
-};
+chatnets = { rizon = { type = "IRC"; nick = "finiks"; }; };
 
 channels = (
   { name = "#wanikani"; chatnet = "rizon"; autojoin = "Yes"; }
