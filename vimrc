@@ -48,6 +48,7 @@ function s:setWrapping()
 endfunction
 
 au BufNewFile,BufRead *.txt call s:setWrapping()
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " Misc
 set nocp
