@@ -1,5 +1,5 @@
 #include "/home/finiks/.config/termcolors/autumndusk"
-urxvt.backgroundPixmap: /home/finiks/pictures/patterns/skewed.png\;style=root-tiled
+urxvt.backgroundPixmap: /home/finiks/media/patterns/skewed.png\;style=root-tiled
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
 urxvt.borderLess:       false
@@ -25,3 +25,5 @@ urxvt.urlLauncher:      dwb
 urxvt.matcher.button:   2
 urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt.termName: rxvt
+
+Xcursor.theme: OpenZone_Black_Slim
