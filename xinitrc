@@ -8,7 +8,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Rehash the fonts
-xset +fp /usr/share/fonts/local
+xset +fp ~/.fonts/
+xset +fp /etc/fonts/local/
 xset fp rehash
 setxkbmap -option grp:caps_toggle us,ca
 
@@ -16,10 +17,10 @@ setxkbmap -option grp:caps_toggle us,ca
 xsetroot -cursor_name left_ptr &
 
 # Background
-hsetroot -tile /home/finiks/pictures/wallpapers/nyaruko.png
+feh --bg-tile /home/finiks/media/patterns/tri_tubes.gif
 
 # Compton
-compton -cCb -fD 2 -r r -o 0.5 -l 2 -t 2 &
+compton &
 
 # Launch mpd
 mpd &
@@ -32,6 +33,9 @@ numlockx &
 
 # Launch the input manager
 ibus-daemon --xim &
+
+# Launch lemonbar
+bar | lemonbar -g 1900x20+10+10 -B "#FF181818" -F "#FFBCBCAF" -f "-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1" &
 
 # Launch bspwm
 sxhkd &
