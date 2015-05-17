@@ -1,12 +1,8 @@
-#
-# bspwm hotkeys
-#
-
-# Exit bspwm
+# Closes bspwm.
 super + shift + q
     bspc quit
 
-# Close window
+# Closes the focused window.
 super + shift + x
     bspc window -c
 
@@ -66,57 +62,61 @@ super + ctrl + {1-9}
 super + {_,shift + }{1-5}
     bspc {desktop -f,window -d} {^1, ^2, ^3, ^4, ^5}
 
-# Mouse focuse window
+# Focuses on a window via mouseover.
 ~button1
     bspc pointer -g focus
 
-# Move or resize a window (mouse)
+# Moves or resizes a window.
 super + button{1-3}
     bspc pointer -g {move,resize_side,resize_corner}
 
 super + !button{1-3}
     bspc pointer -t %i %i
 
-#
-# wm independent hotkeys
-#
-
+# Spawns a terminal.
 super + shift + Return
     urxvt
 
+# Toggles a window between floating and tiled.
 super + ctrl + Return
     bspc window -t floating
 
+# Opens dwb.
 super + shift + d
     dwb
 
+# Opens steam.
 super + shift + s
     steam
 
+# Opens mumble.
 super + shift + m
     mumble
 
-super + space
-    dmenu_run
-
+# Decreases the LCD backlight.
 super + F5
     xbacklight -dec 20
 
+# Increases the LCD backlight.
 super + F6
     xbacklight -inc 20
 
+# Turns off the LCD backlight.
 super + F7
     sleep 1 && xset dpms force off
 
+# Toggle the playback on MPD.
 super + F10
-    ncmpcpp toggle
+    mpc toggle
 
+# Decreases the master volume.
 super + F11
     amixer -c 0 set Master 5- unmute
 
+# Increases the master volume.
 super + F12
     amixer -c 0 set Master 5+ unmute
 
-# make sxhkd reload its configuration files:
+# Reloads sxhkd
 super + Escape
     pkill -USR1 -x sxhkd
