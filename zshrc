@@ -70,7 +70,6 @@ alias ganftp="sftp admin@finiks.net"
 alias ganssh="ssh admin@finiks.net"
 
 # Launch at the start of the terminal.
-~/bin/todo
 export SUDO_EDITOR=rvim
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:/home/finiks/bin:$GOPATH/bin
