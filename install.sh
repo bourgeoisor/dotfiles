@@ -19,6 +19,11 @@ while true; do
     esac
 done
 
+# todo: package installation
+echo
+echo "Installing the adblock plus dwb plugin..."
+dwbem -i adblock_subscriptions
+
 echo
 echo "Cloning oh-my-zsh..."
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
