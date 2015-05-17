@@ -21,14 +21,14 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
 PROMPT='
-%{$fg[gray]%}┌─[%{$fg_bold[yellow]%}%~%{$reset_color$fg[gray]%}]\
+%{$fg[gray]%}┌─[%{$fg_bold[blue]%}%~%{$reset_color$fg[gray]%}]\
     $(git_prompt_info "[$fg_bold[red]%s$reset_color$fg[gray]]")
 └─╼%{$reset_color%} %'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"
-ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
-ZSH_THEME_GIT_PROMPT_CLEAN=" ✔"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[cyan]%}]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}✔"
 
 #source /home/finiks/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
