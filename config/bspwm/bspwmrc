@@ -6,18 +6,27 @@ REMAINING_DESKS="II III IV V"
 bspc desktop Desktop01 -n $FIRST_DESK
 bspc monitor -a $REMAINING_DESKS
 
+desktop_config() {
+    bspc config $1 $2
+    for M in $(bspc query -M); do
+        bspc config -m $M $1 $2
+    done
+}
+
+desktop_config border_width            2
+desktop_config window_gap              10
+desktop_config top_padding             30
+
 bspc config split_ratio             0.52
-bspc config border_width            3
-bspc config window_gap              12
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 bspc config focus_follows_pointer   true
-bspc config focused_border_color    '#8C9440'
+bspc config focused_border_color    '#FFFFFF'
 bspc config normal_border_color     '#6E6E6E'
 
-bspc rule -a feh --floating
-bspc rule -a Gimp --floating
-bspc rule -a Steam --floating
-bspc rule -a MPlayer --floating
-bspc rule -a Mumble --floating
-bspc rule -a VirtualBox --floating
+bspc rule -a feh floating=on
+bspc rule -a Gimp floating=on
+bspc rule -a Steam floating=on
+bspc rule -a MPlayer floating=on
+bspc rule -a Mumble floating=on
+bspc rule -a VirtualBox folating=on
