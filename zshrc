@@ -63,13 +63,7 @@ alias key="sudo umount /dev/sdb1"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias ducks="du -cksh * | sort -rn|head -11"
 
-alias coin="/home/finiks/dev/scripts/deercoin.py"
-
-alias gandi="sftp 20024@sftp.dc1.gpaas.net"
-alias ganftp="sftp admin@finiks.net"
-alias ganssh="ssh admin@finiks.net"
-
 # Launch at the start of the terminal.
 export SUDO_EDITOR=rvim
 export GOPATH=$HOME/dev/go
-export PATH=$PATH:/home/finiks/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/dotfiles/bin:$GOPATH/bin
