@@ -1,0 +1,43 @@
+#!/bin/sh
+
+DIVIDER=" %{F#FF777777}::%{F-} "
+
+desktops_status() {
+    DESKTOPS=$(bspc control --get-status | tr ':' '\n')
+    for DESKTOP in $DESKTOPS; do
+        case $DESKTOP in
+            [OFU]*)
+                echo -n "%{+u}||%{-u} "
+                ;;
+            o*)
+                echo -n "|| "
+                ;;
+            f*)
+                echo -n "%{F#FF777777}||%{F-} "
+                ;;
+            u*)
+                echo -n "!! "
+                ;;
+        esac
+    done
+}
+
+mpd_status() {
+    mpc current -f "[%artist%]" | tr -d '\n'
+    echo -n "$DIVIDER"
+    mpc current -f "[%title%]" | tr -d '\n'
+}
+
+date_time() {
+    echo -n "$(date "+%A, %B %d, %Y")"
+    echo -n "$DIVIDER"
+    echo -n "$(date "+%H:%M")"
+}
+
+while true; do
+    echo
+    echo -n "%{l} $(desktops_status)"
+    echo -n "%{c} $(mpd_status)"
+    echo -n "%{r} $(date_time) "
+    sleep 0.1;
+done

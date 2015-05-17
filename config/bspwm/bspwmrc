@@ -30,3 +30,5 @@ bspc rule -a Steam floating=on
 bspc rule -a MPlayer floating=on
 bspc rule -a Mumble floating=on
 bspc rule -a VirtualBox folating=on
+
+~/.config/bspwm/bar | lemonbar -g 1900x20+10+10 -B "#FF181818" -F "#FFBCBCAF" -f "-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"

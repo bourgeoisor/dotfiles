@@ -1,6 +1,6 @@
 # Closes bspwm.
 super + shift + q
-    bspc quit
+    pkill bar && bspc quit
 
 # Closes the focused window.
 super + shift + x
