@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Loads plugins.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 autoload -U zmv
@@ -30,7 +30,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
 ZSH_THEME_GIT_PROMPT_CLEAN=" ✔"
 
-source /home/finiks/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /home/finiks/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Custom aliases.
 alias ls="ls -Fh --color --group-directories-first"
