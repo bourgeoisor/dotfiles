@@ -19,6 +19,7 @@ config/Mumble
 config/MusicBrainz
 config/pulse
 config/ranger
+config/Risk_of_Rain
 config/rncbc.org
 config/Skype
 config/teamviewer8
@@ -35,6 +36,7 @@ ncmpcpp/error.log
 
 vim/.netrwhist
 
+irssi/config.autosave
 irssi/logs
 irssi/sasl.auth
 irssi/saved_colors
