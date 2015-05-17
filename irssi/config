@@ -4,9 +4,9 @@ servers = (
   {
     address = "162.243.226.199";
     chatnet = "rizon";
-    port = "5000";
-    ssl_verify = "no";
+    port = "5555";
     use_ssl = "yes";
+    ssl_verify = "no";
     autoconnect = "yes";
     user_name = "finiks";
   }
