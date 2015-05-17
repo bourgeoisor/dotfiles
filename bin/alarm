@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+
+import time
+import os
+import sys
+
+running = 1
+
+args = sys.argv[1:]
+
+target_time = int(args[0])
+
+while running == 1:
+    time.sleep(1)
+    cur_time = int(time.time())
+    delta = target_time - cur_time
+    if delta > 0:
+        print('{} seconds left.'.format(delta))
+    else:
+        running = 0
+
+os.system("ncmpcpp play")
+#os.system("amixer -c 0 set Master 75 unmute")
+
+running = 1
+loops = 0
+
+while running == 1:
+    time.sleep(1)
+    loops += 1
+    if loops == 30:
+        loops == 0
+        os.system("ncmpcpp play")
+        #os.system("amixer -c 0 set Master 75 unmute")

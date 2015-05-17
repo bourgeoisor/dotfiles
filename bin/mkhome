@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case $1 in
+    e)
+    vim ~/notes/bookmarks.fnks
+    ;;
+esac
+
+python /mnt/share/dev/scripts/home.py
+mv ~/temp/homepage.html ~/temp/style_homepage.css ~/temp/app_homepage.js ~/

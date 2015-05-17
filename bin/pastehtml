@@ -1,0 +1,3 @@
+#!/bin/bash
+txt=`cat`
+echo `curl -s -S --data-urlencode "txt=$txt" "http://pastehtml.com/upload/create?input_type=txt&result=address"`

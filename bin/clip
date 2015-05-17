@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ $1 =  ]; then
+    rm ~/.temp
+    vim ~/.temp
+    file=$HOME/.temp
+else
+    file=$1
+fi
+
+
+cat $file | curl -F 'sprunge=<-' http://sprunge.us | xclip

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+expr $1 * 60
+start=$(expr $1 \* 60)
+
+while [ ! $start -lt 0 ]
+do
+    clear
+    toilet -f future -F metal $(expr $start / 60) : $(expr $start % 60)
+    sleep 1
+    start=$(expr $start - 1)
+done
