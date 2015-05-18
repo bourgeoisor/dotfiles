@@ -67,7 +67,6 @@ statusbar = {
       visible = "always";
 
       items = {
-        time = { };
         user = { };
         prompt = { priority = "-1"; };
         prompt_empty = { priority = "-1"; };
@@ -108,7 +107,7 @@ settings = {
 
   "fe-common/core" = {
     emphasis = "OFF";
-    theme = "pbrisbin";
+    theme = "default";
     beep_msg_level = "MSGS NOTICES INVITES DCC DCCMSGS HILIGHT";
     bell_beeps = "yes";
     hilight_nick_matches = "no";
@@ -127,6 +126,7 @@ settings = {
     bitlbee_send_typing = "yes";
     lt_in_queries = "yes";
     neat_left_actions = "no";
+    neat_colorize = "no";
   };
 };
 
