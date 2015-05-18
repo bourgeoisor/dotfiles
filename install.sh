@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo
 echo -e "\033[0;34m**********************************\033[0m"
 echo -e "\033[0;34m*** Finiks' dotfiles installer ***\033[0m"
 echo -e "\033[0;34m**********************************\033[0m"
@@ -42,4 +43,7 @@ for ITEM in $ITEMS; do
     echo
 done
 
-echo -e "\033[0;32mAll done!\033[0m"
+echo -e "\033[0;33m/!\\ \033[0mDon't forget to create a config file for mpdas!"
+
+echo
+echo "** All done! **"

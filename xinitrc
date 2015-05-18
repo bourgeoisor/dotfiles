@@ -23,6 +23,7 @@ feh --bg-tile /home/finiks/media/patterns/tri_tubes.gif
 compton &
 
 # Launch mpd
+mpdas -c ~/.mpdasrc &
 mpd &
 
 # Disable the touchpad
