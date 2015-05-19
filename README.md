@@ -11,8 +11,8 @@ Change your working directory into the cloned repository.
 
     cd dotfiles
     
-Finally, use the created Makefile.
+Finally, run the install script.
 
-    make
+    ./install.sh
 
-This will make symbolic links in your `~/` directory. Take note that this process will overwrite any existing configuration files.
+Take note that this process will overwrite any existing configuration files.
