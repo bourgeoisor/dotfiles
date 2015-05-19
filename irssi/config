@@ -49,7 +49,7 @@ statusbar = {
     window = {
       type = "window";
       placement = "top";
-      visible = "active";
+      visible = "inactive";
       items = { window = { }; window_empty = { }; typing_notice = { }; };
     };
 

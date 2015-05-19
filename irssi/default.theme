@@ -63,10 +63,10 @@ abstracts = {
   ##
 
   # text to insert at the beginning of each non-message line
-  line_start = "%B-%W!%B-%n ";
+  line_start = "%B-%n";
 
   # timestamp styling, nothing by default
-  timestamp = "$*";
+  timestamp = "%K$*%n";
 
   # any kind of text that needs hilighting, default is to bold
   hilight = "%_$*%_";
@@ -142,7 +142,7 @@ abstracts = {
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0 $1-}";
-  pubnick = "%c$*%n";
+  pubnick = "%b$*%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
@@ -173,7 +173,7 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = "%c$*%c ";
+  action_core = " %b$*%b";
 
   # generic one that's used by most actions
   action = "{action_core $*}";
@@ -297,10 +297,10 @@ formats = {
     line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
-    join = "      %g join │ %n {channick $0}";
-    part = "     %r  part │ %n {channick $0}";
-    kick =  "   %r kicked │ %n {channick $0}";
-    quit = "     %r  quit │ %n {channick $0}";
+    join = "         %g join │ {channick $0}%n";
+    part = "        %r  part │ {channick $0}%n";
+    kick = "       %r kicked │ {channick $0}%n";
+    quit = "        %r  quit │ {channick $0}%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
     nick_changed = "%K{channick $[-13]0} %G│ %n {channick $1}";
@@ -322,15 +322,15 @@ formats = {
     msg_private_query = "{privmsgnick $[-15]0}$2";
     new_topic = "       %ctopic %K│  %B'$2' %non %b$1%n%K[set by {nick %y$0}]";
 
-    endofnames = "       names %Y│%m  Total: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
+    endofnames = "        %Y names │%m  Total: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
   };
   "fe-common/irc" = {
-    chanmode_change = "        mode %y│ %n {channick $1}";
-    server_chanmode_change = "%        mode %y│ %n {channick $1}";
+    chanmode_change = "         %y mode │ %n {channick $1}";
+    server_chanmode_change = "%         %y mode │ %n {channick $1}";
 
     own_action = "{ownaction $[-13]0} $1";
     action_private = "{pvtaction $[-13]0}$1";
     action_private_query = "{pvtaction_query $[-13]0} $2";
-    action_public = "{pubaction $[-13]0}$1";
+    action_public = "{pubaction $[-13]0} $1";
   };
 };
