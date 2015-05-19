@@ -22,6 +22,9 @@ feh --bg-tile /home/finiks/media/patterns/tri_tubes.gif
 # Compton
 compton &
 
+# Dunst
+dunst &
+
 # Launch mpd
 mpdas -c ~/.mpdasrc &
 mpd &

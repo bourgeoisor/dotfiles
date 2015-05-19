@@ -44,6 +44,7 @@ for ITEM in $ITEMS; do
 done
 
 echo -e "\033[0;33m/!\\ \033[0mDon't forget to create a config file for mpdas!"
+echo -e "\033[0;33m/!\\ \033[0mDon't forget to enable cronie.service!"
 
 echo
 echo "** All done! **"

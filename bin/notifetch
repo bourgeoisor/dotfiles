@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export DISPLAY=:0.0
+export HOME=/home/finiks
+export XAUTHORITY=$HOME/.Xauthority
+
+WKSTATUS=$(/home/finiks/wanikani_status.py)
+
+if [ ! -z "$WKSTATUS" ]; then
+    /usr/bin/notify-send -u normal "Wanikani: Pending Items" "$WKSTATUS"
+fi
