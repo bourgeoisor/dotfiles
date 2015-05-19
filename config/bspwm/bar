@@ -16,7 +16,7 @@ desktops_status() {
                 echo -n "%{F#FF777777}||%{F-} "
                 ;;
             u*)
-                echo -n "!! "
+                echo -n "%{F#FF54C0D0}!!%{F-} "
                 ;;
         esac
     done
