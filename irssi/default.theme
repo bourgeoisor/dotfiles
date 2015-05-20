@@ -104,7 +104,7 @@ abstracts = {
   chanhost_hilight = "{nickhost %c$*%n}";
 
   # nick/host is printed (parts, quits, etc.)
-  channick = "%c$*%n";
+  channick = "%b$*%n";
   chanhost = "{nickhost $*}";
 
   # highlighted channel name is printed
@@ -173,10 +173,10 @@ abstracts = {
   ##
 
   # used internally by this theme
-  action_core = " %b$*%b";
+  action_core = " %b$0%b";
 
   # generic one that's used by most actions
-  action = "{action_core $*}";
+  action = " {action_core $*} ";
 
   # own action, both private/public
   ownaction = "{action $*}";
@@ -303,10 +303,10 @@ formats = {
     quit = "        %r  quit │ {channick $0}%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
-    nick_changed = "%K{channick $[-13]0} %G│ %n {channick $1}";
+    nick_changed = " %K{channick $[-13]0} %G│ %n {channick $1}";
     your_nick_changed = "%K         you %G│ %n {channick $1}";
 
-    pubmsg = "{pubmsgnick {pubnick %w$[-15]0}$2}$1";
+    pubmsg = "{pubmsgnick {pubnick $[-15]0$2}}$1";
 
     own_msg = "{ownmsgnick {ownnick $[-15]0$2}}$1";
     own_msg_channel = "{ownmsgnick {ownnick $[-15]0$3}{msgchannel $1}}$2";
@@ -318,7 +318,7 @@ formats = {
     pubmsg_hilight = "{pubmsghinick $0 $0 $[-15]1$3%n}$2";
     pubmsg_hilight_channel = "{pubmsghinick $0 $[-15]1$4{msgchannel $2}}$3";
 
-    pubmsg_channel = "{pubmsgnick {pubnick %w$[-15]0}$2}$1";
+    pubmsg_channel = "{pubmsgnick {pubnick $[-15]0$2}}$1";
     msg_private_query = "{privmsgnick $[-15]0}$2";
     new_topic = "       %ctopic %K│  %B'$2' %non %b$1%n%K[set by {nick %y$0}]";
 
@@ -328,9 +328,9 @@ formats = {
     chanmode_change = "         %y mode │ %n {channick $1}";
     server_chanmode_change = "%         %y mode │ %n {channick $1}";
 
-    own_action = "{ownaction $[-13]0} $1";
-    action_private = "{pvtaction $[-13]0}$1";
-    action_private_query = "{pvtaction_query $[-13]0} $2";
-    action_public = "{pubaction $[-13]0} $1";
+    #own_action = "{ownaction $[-13]0} $1";
+    #action_private = "{pvtaction $[-13]0} $1";
+    #action_private_query = "{pvtaction_query $[-13]0} $2";
+    #action_public = "{pubaction $[-13]0} $1";
   };
 };
