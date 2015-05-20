@@ -24,6 +24,9 @@ done
 echo
 echo "Installing the adblock plus dwb plugin..."
 dwbem -i adblock_subscriptions
+echo
+echo "Installing the userscripts dwb plugin..."
+dwbem -i userscripts
 
 echo
 echo "Cloning oh-my-zsh..."
