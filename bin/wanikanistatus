@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import urllib.request
+import json
+
+url = 'http://www.wanikani.com/api/user/642896b35628eefee51fc55b5ac9ab46/study-queue/'
+resp = json.loads(urllib.request.urlopen(url).read().decode('utf-8'))
+
+data = resp['requested_information']
+
+if data['lessons_available'] > 0:
+    print('Lessons:', info['lessons_available'], end=' - ')
+if data['reviews_available'] > 0:
+    print('Reviews:', info['reviews_available'], end=' ')

@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import imaplib
+
+mail = imaplib.IMAP4_SSL('imap.gmail.com')
+mail.login('bourgeoisor@gmail.com', 'ithnyvxruvfbrjsa')
+mail.select()
+
+typ, data = mail.search(None, 'UNSEEN')
+
+amount_of_unseen_emails = len(data[0].split())
+
+if amount_of_unseen_emails > 0:
+    print('New mail: ', amount_of_unseen_emails, end='')
