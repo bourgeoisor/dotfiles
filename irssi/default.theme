@@ -303,7 +303,7 @@ formats = {
     quit = "        %r  quit │ {channick $0}%n";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
-    nick_changed = " %K{channick $[-13]0} %G│ %n {channick $1}";
+    nick_changed = " %K{channick $[-13]0} %G│ %n{channick $1}";
     your_nick_changed = "%K         you %G│ %n {channick $1}";
 
     pubmsg = "{pubmsgnick {pubnick $[-15]0$2}}$1";
