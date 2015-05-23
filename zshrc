@@ -43,7 +43,7 @@ alias dir755="find ./ -type d -exec chmod 755 {} +"
 alias files644="find ./ -type f -exec chmod 644 {} +"
 
 alias pac-s="sudo pacman -Ss"
-alias pac-u="sudo pacman -Syu"
+alias pac-u="echo \"HAVE THE /BOOT MOUNTED FIRST.\" && sudo pacman -Syu"
 alias pac-i="sudo pacman -Sy"
 alias pac-r="sudo pacman -R"
 
