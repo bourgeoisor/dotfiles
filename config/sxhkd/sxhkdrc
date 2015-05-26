@@ -93,6 +93,10 @@ super + shift + s
 super + shift + m
     mumble
 
+# Opens firefox.
+super + shift + f
+    firefox
+
 # Decreases the LCD backlight.
 super + F5
     xbacklight -dec 20
