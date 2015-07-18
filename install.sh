@@ -43,11 +43,15 @@ sudo pacman -Sy alsa-utils dunst flashplugin otf-ipafont numlockx terminus-font 
 
 echo
 echo "Installing tool applications..."
-sudo pacman -Sy figlet htop mlocate ranger screen scrot tree xclip yaourt
+sudo pacman -Sy figlet htop mlocate openssh ranger screen scrot tree xclip yaourt
 
 echo
 echo "Installing multimedia applications..."
 sudo pacman -Sy feh mpc mpd mplayer ncmpcpp
+
+echo
+echo "Installing dev applications and utils..."
+sudo pacman -Sy go
 
 echo
 echo "Installing misc applications..."
