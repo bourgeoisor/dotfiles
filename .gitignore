@@ -22,6 +22,7 @@ config/rncbc.org
 config/Skype
 config/teamviewer8
 config/Trolltech.conf
+config/unity3d
 
 mpd/database
 mpd/log
