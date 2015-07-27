@@ -39,7 +39,7 @@ sudo pacman -Sy bbswitch bumblebee ntfs-3g lib32-mesa-libgl lib32-nvidia-utils m
 
 echo
 echo "Installing utils..."
-sudo pacman -Sy alsa-utils dunst flashplugin otf-ipafont numlockx terminus-font zsh
+sudo pacman -Sy alsa-utils dunst otf-ipafont numlockx terminus-font zsh
 
 echo
 echo "Installing tool applications..."
