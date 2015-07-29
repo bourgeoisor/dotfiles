@@ -16,6 +16,7 @@ config/jack
 config/Mumble
 config/MusicBrainz
 config/pulse
+config/QtProject.conf
 config/ranger
 config/Risk_of_Rain
 config/rncbc.org
@@ -23,6 +24,7 @@ config/Skype
 config/teamviewer8
 config/Trolltech.conf
 config/unity3d
+config/xm1
 
 mpd/database
 mpd/log
