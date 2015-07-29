@@ -51,11 +51,11 @@ sudo pacman -Sy feh mpc mpd mplayer ncmpcpp
 
 echo
 echo "Installing dev applications and utils..."
-sudo pacman -Sy go
+sudo pacman -Sy go texlive-most texlive-lang texmaker vim
 
 echo
 echo "Installing misc applications..."
-sudo pacman -Sy dwb irssi rtorrent steam vim
+sudo pacman -Sy dwb irssi rtorrent steam
 
 echo
 echo "Installing the adblock plus dwb plugin..."
