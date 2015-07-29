@@ -26,8 +26,8 @@ compton &
 dunst &
 
 # Launch mpd
-mpdas -c ~/.mpdasrc &
 mpd &
+mpdas -c ~/.mpdasrc &
 
 # Disable the touchpad
 synclient TouchpadOff=1
