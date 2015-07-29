@@ -4,7 +4,7 @@ export DISPLAY=:0.0
 export HOME=/home/finiks
 export XAUTHORITY=$HOME/.Xauthority
 
-WKSTATUS=$(/home/finiks/dotfiles/bin/wanikanistatus)
+#WKSTATUS=$(/home/finiks/dotfiles/bin/wanikanistatus)
 
 if [ ! -z "$WKSTATUS" ]; then
     /usr/bin/notify-send -u normal "Wanikani" "$WKSTATUS"
