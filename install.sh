@@ -55,7 +55,7 @@ sudo pacman -Sy go texlive-most texlive-lang texmaker vim
 
 echo
 echo "Installing misc applications..."
-sudo pacman -Sy dwb irssi rtorrent steam
+sudo pacman -Sy dwb irssi picard rtorrent steam
 
 echo
 echo "Installing the adblock plus dwb plugin..."
