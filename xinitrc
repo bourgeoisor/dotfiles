@@ -41,6 +41,9 @@ ibus-daemon --xim &
 # Launch lemonbar
 bar | lemonbar -g 1900x20+10+10 -B "#FF181818" -F "#FFBCBCAF" -f "-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1" &
 
+# Launch redshift
+redshift -l 46.220197:-64.534687 &
+
 # Launch bspwm
 sxhkd &
 exec bspwm
