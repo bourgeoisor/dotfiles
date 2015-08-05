@@ -39,7 +39,7 @@ sudo pacman -Sy bbswitch bumblebee ntfs-3g lib32-mesa-libgl lib32-nvidia-utils m
 
 echo
 echo "Installing utils..."
-sudo pacman -Sy alsa-utils dunst otf-ipafont numlockx redshift terminus-font zsh
+sudo pacman -Sy alsa-utils dunst ifplugd otf-ipafont numlockx redshift terminus-font wpa_actiond zsh
 
 echo
 echo "Installing tool applications..."
@@ -100,6 +100,12 @@ sudo systemctl enable cronie
 echo
 echo "Enabling bumblebeed..."
 sudo systemctl enable bumblebeed
+echo
+echo "Enabling ifplugd..."
+sudo systemctl enable netctl-ifplugd@enp4s0.service
+echo
+echo "Enabling netctl-auto..."
+sudo systemctl enable netctl-auto@wlp3s0.service
 
 echo
 echo "Changing shell for zsh..."
