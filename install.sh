@@ -107,6 +107,9 @@ echo
 echo "Enabling netctl-auto..."
 sudo systemctl enable netctl-auto@wlp3s0.service
 
+echo "Updating crontab..."
+crontab ~/.config/crontab.conf
+
 echo
 echo "Changing shell for zsh..."
 chsh -s /bin/zsh
