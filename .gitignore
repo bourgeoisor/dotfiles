@@ -13,6 +13,7 @@ config/gtk-3.0
 config/htop
 config/ibus
 config/jack
+config/MonoGame
 config/Mumble
 config/MusicBrainz
 config/pulse
