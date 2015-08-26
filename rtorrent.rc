@@ -2,6 +2,12 @@
 # ~/.rtorrent.rc and enable/modify the options as needed. Remember to
 # uncomment the options you wish to enable.
 
+# Color patch options.
+color_inactive_fg = 4
+color_dead_fg = 1
+color_active_fg = 3
+color_finished_fg = 2
+
 # Maximum and minimum number of peers to connect to per torrent.
 #min_peers = 40
 #max_peers = 100

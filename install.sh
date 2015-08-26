@@ -55,7 +55,7 @@ sudo pacman -Sy go texlive-most texlive-lang texmaker vim
 
 echo
 echo "Installing misc applications..."
-sudo pacman -Sy dwb irssi mupdf picard rtorrent steam
+sudo pacman -Sy dwb irssi mupdf picard steam
 
 echo
 echo "Installing the adblock plus dwb plugin..."
@@ -70,6 +70,7 @@ yaourt -S compton
 yaourt -S lemonbar-git
 yaourt -S mpdas
 yaourt -S rxvt-unicode-pixbuf
+yaourt -S rtorrent-color
 
 echo
 echo "Cloning oh-my-zsh..."
