@@ -71,6 +71,7 @@ yaourt -S lemonbar-git
 yaourt -S mpdas
 yaourt -S rxvt-unicode-pixbuf
 yaourt -S rtorrent-color
+yaourt -S qutebrowser
 
 echo
 echo "Cloning oh-my-zsh..."

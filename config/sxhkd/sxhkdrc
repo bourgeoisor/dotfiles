@@ -95,7 +95,7 @@ super + shift + m
 
 # Opens firefox.
 super + shift + f
-    firefox
+    qutebrowser
 
 # Decreases the LCD backlight.
 super + F5
