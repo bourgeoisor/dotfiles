@@ -3,7 +3,7 @@
 import sys, os
 
 path_urls = '/home/finiks/notes/bookmarks.fnks'
-path_output = '/home/finiks/'
+path_output = '/home/finiks/www/temp/home/'
 
 list_cat = []
 list_urls = []
@@ -24,7 +24,7 @@ f_urls.close()
 css = '''body {
   background-image: url('patt.png');
   background-repeat: repeat;
-  font-family: Terminus;
+  font-family: "Droid Sans Mono", monospace;
   font-size: 14px;
   margin-left: 7%;
   color: #999999;
@@ -81,6 +81,7 @@ html = '''<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>home</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" />
   <link rel="stylesheet" type="text/css" href="style_homepage.css" />
 </head>
 <body>
@@ -88,7 +89,7 @@ html = '''<html>
   <span class="toggle"><span class="dgrey">finiks</span><span class="grey">@</span><span class="dgrey">localhost</span></span>
     %s
   </td></tr></table>
-  <script src="jquery.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="app_homepage.js"></script>
 </body>
 </html>''' % (links_html)
@@ -107,7 +108,7 @@ $(document).ready(function(){
   });
 });\n'''
 
-with open(path_output+'homepage.html', 'w') as file:
+with open(path_output+'index.html', 'w') as file:
     file.write(html)
 with open(path_output+'style_homepage.css', 'w') as file:
     file.write(css)
