@@ -44,7 +44,7 @@ set noswapfile
 function s:setWrapping()
     set wrap
     set wm=2
-    set textwidth=72
+    set textwidth=100
 endfunction
 
 au BufNewFile,BufRead *.txt call s:setWrapping()
