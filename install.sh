@@ -22,28 +22,22 @@ while true; do
 done
 
 echo
-echo "Adding multilib and archlinuxfr to pacman.conf..."
+echo "Adding multilib to pacman.conf..."
 sudo sh -c '{ echo "[multilib]" >> /etc/pacman.conf; }'
-sudo sh -c '{ echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf; }'
-sudo sh -c '{ echo "[archlinuxfr]" >> /etc/pacman.conf; }'
-sudo sh -c '{ echo "SigLevel = Never" >> /etc/pacman.conf; }'
-sudo sh -c '{ echo "Server = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf; }'
+sudo sh -c '{ echo "Include = /etc/pacman.d/mirrorlist" >> 
+#/etc/pacman.conf; }'
 
 echo
 echo "Installing xorg and the WM..."
-sudo pacman -Sy bspwm sxhkd xorg-server xorg-server-utils xorg-xinit
-
-echo
-echo "Installing drivers..."
-sudo pacman -Sy bbswitch bumblebee ntfs-3g lib32-mesa-libgl lib32-nvidia-utils mesa nvidia xf86-video-intel
+sudo pacman -Sy bspwm sxhkd xorg-server xorg-server-utils xorg-xinit xf86-video-intel
 
 echo
 echo "Installing utils..."
-sudo pacman -Sy alsa-utils dunst ifplugd otf-ipafont numlockx redshift terminus-font wpa_actiond zsh
+sudo pacman -Sy alsa-utils dunst ifplugd otf-ipafont numlockx terminus-font wpa_actiond zsh
 
 echo
 echo "Installing tool applications..."
-sudo pacman -Sy figlet htop mlocate openssh ranger screen scrot tree xclip yaourt
+sudo pacman -Sy figlet htop mlocate openssh ranger tmux scrot tree xclip
 
 echo
 echo "Installing multimedia applications..."
@@ -51,18 +45,15 @@ sudo pacman -Sy feh mpc mpd mplayer ncmpcpp
 
 echo
 echo "Installing dev applications and utils..."
-sudo pacman -Sy go texlive-most texlive-lang texmaker vim
+sudo pacman -Sy go vim
+
+echo
+echo "Installing TeX..."
+sudo pacman -S texlive-most texlive-lang texmaker
 
 echo
 echo "Installing misc applications..."
-sudo pacman -Sy dwb irssi mupdf picard steam
-
-echo
-echo "Installing the adblock plus dwb plugin..."
-dwbem -i adblock_subscriptions
-echo
-echo "Installing the userscripts dwb plugin..."
-dwbem -i userscripts
+sudo pacman -Sy irssi mupdf picard steam
 
 echo
 echo "Installing AUR exclusive packages..."
@@ -99,16 +90,8 @@ touch ~/.mpd/log
 echo
 echo "Enabling cronie..."
 sudo systemctl enable cronie
-echo
-echo "Enabling bumblebeed..."
-sudo systemctl enable bumblebeed
-echo
-echo "Enabling ifplugd..."
-sudo systemctl enable netctl-ifplugd@enp4s0.service
-echo
-echo "Enabling netctl-auto..."
-sudo systemctl enable netctl-auto@wlp3s0.service
 
+echo
 echo "Updating crontab..."
 crontab ~/.config/crontab.conf
 
