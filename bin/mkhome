@@ -27,45 +27,36 @@ css = '''body {
   font-family: "Droid Sans Mono", monospace;
   font-size: 14px;
   margin-left: 7%;
-  color: #999999;
+  color: #ffffff;
 }
 a {
-  color: #999999;
+  color: #ffffff;
 }
 a:link,a:visited,a:active {
   text-decoration: none;
-  color: #999999;
+  color: #ffffff;
   font-weight: normal;
 }
 a:hover {
   text-decoration: none;
   border-bottom: 1px dotted;
-  color: #999999;
+  color: #ffffff;
   font-weight: normal;
 }
 h2 {
-  color: b3b3b3;
+  color: #ffffff;
+  text-shadow: 2px 2px #222222;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: -5px;
 }
 .grey {
-  color: 454545;
+  color: #cccccc;
 }
 .dgrey {
-  color: 353535;
+  color: #999999;
 }
-table {
-  border-spacing: 8px;
-}
-  td:first-child {
-  font-weight: bold;
-  color: #999999
-}
-  td:nth-child(2) {
-  font-weight: normal;
-  color: b3b3b3;
-}'''
+'''
 
 links_html = ''
 for index, item in enumerate(list_cat):
@@ -80,7 +71,7 @@ for index, item in enumerate(list_cat):
 html = '''<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>home</title>
+  <title>Kyaa!</title>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" />
   <link rel="stylesheet" type="text/css" href="style_homepage.css" />
 </head>
