@@ -63,7 +63,14 @@ map <F2> :NERDTreeToggle<CR>
 
 autocmd FileType html,ruby,eruby,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-let g:hybrid_use_Xresources = 1
+" let g:hybrid_use_Xresources = 1
+" colorscheme hybrid
+
+" colorscheme monokai
+
+" set background=dark
+let g:hybrid_use_Xresources = 1 
 colorscheme hybrid
+" colorscheme material-theme
 
 " let g:Powerline_symbols = 'fancy'

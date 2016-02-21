@@ -1,5 +1,10 @@
-#include "/home/finiks/.config/termcolors/autumndusk"
-urxvt.backgroundPixmap: /home/finiks/media/patterns/skewed.png\;style=root-tiled
+#include "/home/finiks/.config/termcolors/navy"
+
+#urxvt.backgroundPixmap: /home/finiks/media/skewed.png\;style=root-tiled
+#urxvt.borderColor:      #121212
+#urxvt.background:       #2E2E2E
+#urxvt.foreground:       #BCBCAF
+
 urxvt.scrollBar_right:  false
 urxvt.scrollBar:        false
 urxvt.borderLess:       false
@@ -8,22 +13,25 @@ urxvt.cursorBlink:      true
 urxvt.internalBorder:   5
 urxvt.transparent:      false
 urxvt.shading:          50
-urxvt.borderColor:      #121212
-urxvt.background:       #2E2E2E
-urxvt.foreground:       #BCBCAF
 urxvt.fading:           0
-
 urxvt.urgentOnBell:     true
 
-urxvt.font:             xft:Terminus:size=9,xft:otf-ipafont:size=9
+Xft.autohint:  0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting:   1
+Xft.antialias: 1
+Xft.dpi:       134
+Xft.rgba:      rgb
 
+urxvt.font:             xft:Terminus:size=9,xft:otf-ipafont:size=9
 urxvt.inputMethod:      ibus
 urxvt.preeditType:      OverTheSpot
 
-urxvt.perl-ext-common:  default,matcher
-urxvt.urlLauncher:      dwb
-urxvt.matcher.button:   2
+urxvt.perl-ext-common:   default,matcher
+urxvt.urlLauncher:       qute-browser
+urxvt.matcher.button:    2
 urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-urxvt.termName: rxvt
+urxvt.termName:          rxvt
 
 Xcursor.theme: OpenZone_Black_Slim
