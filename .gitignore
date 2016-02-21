@@ -19,6 +19,7 @@ config/Mumble
 config/MusicBrainz
 config/pulse
 config/QtProject.conf
+config/qutebrowser/bookmarks
 config/ranger
 config/Risk_of_Rain
 config/rncbc.org
