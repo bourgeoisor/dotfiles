@@ -4,7 +4,7 @@ super + shift + q
 
 # Closes the focused window.
 super + shift + x
-    bspc window -c
+    bspc node -c
 
 super + ctrl + shift + x
     bspc window -k
@@ -32,10 +32,10 @@ super + m
 
 # Select or move a window
 super + {_,shift + }{h,j,k,l}
-    bspc window -{f,s} {left,down,up,right}
+    bspc node -{f,s} {left,down,up,right}
 
 super + {_,shift + }c
-    bspc window -f {next,prev}
+    bspc node -f {next,prev}
 
 super + {comma,period}
     bspc desktop -C {backward,forward}
@@ -45,19 +45,19 @@ super + bracket{left,right}
 
 # Preselect window for splitting
 super + ctrl + {h,j,k,l}
-    bspc window -p {left,down,up,right}
+    bspc node -p {left,down,up,right}
 
 super + ctrl + {_,shift + }space
-    bspc {window -p cancel,desktop -c}
+    bspc {node -p cancel,desktop -c}
 
 super + alt + {h,j,k,l}
-    bspc window -e {left,down,up,right} push
+    bspc node -e {left,down,up,right} push
 
 super + alt + shift + {h,j,k,l}
-    bspc window -e {right,up,down,left} pull
+    bspc node -e {right,up,down,left} pull
 
 super + ctrl + {1-9}
-    bspc window -r 0.{1-9}
+    bspc node -r 0.{1-9}
 
 super + {_,shift + }{1-5}
     bspc {desktop -f,window -d} {^1, ^2, ^3, ^4, ^5}
@@ -79,7 +79,7 @@ super + shift + Return
 
 # Toggles a window between floating and tiled.
 super + ctrl + Return
-    bspc window -t floating
+    bspc node -t floating
 
 # Opens dwb.
 super + shift + d
