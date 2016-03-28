@@ -3,7 +3,7 @@
 DIVIDER=" %{F#FF777777}::%{F-} "
 
 desktops_status() {
-    DESKTOPS=$(bspc control --get-status | tr ':' '\n')
+    DESKTOPS=$(bspc wm -g | tr ':' '\n')
     for DESKTOP in $DESKTOPS; do
         case $DESKTOP in
             [OFU]*)

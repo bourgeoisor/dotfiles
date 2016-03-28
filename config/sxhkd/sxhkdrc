@@ -79,7 +79,7 @@ super + shift + Return
 
 # Toggles a window between floating and tiled.
 super + ctrl + Return
-    bspc node -t floating
+    bspc node -t \~floating
 
 # Opens dwb.
 super + shift + d
