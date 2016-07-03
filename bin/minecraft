@@ -1,1 +1,0 @@
-optirun java -Xmx2048M -Xms1024M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame
