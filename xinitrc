@@ -17,7 +17,7 @@ setxkbmap -option grp:caps_toggle us,ca
 xsetroot -cursor_name left_ptr &
 
 # Background
-feh --bg-tile /home/finiks/media/wall.png
+feh --bg-tile /home/finiks/.config/wallpaper
 
 # Compton
 compton &

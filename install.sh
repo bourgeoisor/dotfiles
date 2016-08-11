@@ -24,8 +24,7 @@ done
 echo
 echo "Adding multilib to pacman.conf..."
 sudo sh -c '{ echo "[multilib]" >> /etc/pacman.conf; }'
-sudo sh -c '{ echo "Include = /etc/pacman.d/mirrorlist" >> 
-#/etc/pacman.conf; }'
+sudo sh -c '{ echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf; }'
 
 echo
 echo "Installing xorg and the WM..."
@@ -33,7 +32,7 @@ sudo pacman -Sy bspwm sxhkd xorg-server xorg-server-utils xorg-xinit xf86-video-
 
 echo
 echo "Installing utils..."
-sudo pacman -Sy alsa-utils dunst ifplugd otf-ipafont numlockx terminus-font wpa_actiond zsh
+sudo pacman -Sy alsa-utils dunst ifplugd otf-ipafont numlockx terminus-font ttf-dejavu wpa_actiond zsh
 
 echo
 echo "Installing tool applications..."
