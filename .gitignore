@@ -28,6 +28,7 @@ config/Skype
 config/teamviewer8
 config/Trolltech.conf
 config/unity3d
+config/wallpaper
 config/xm1
 
 mpd/database
