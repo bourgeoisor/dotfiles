@@ -1,4 +1,4 @@
-#include "/home/finiks/.config/termcolors/navy"
+#include "/home/finiks/.config/termcolors/solarized"
 
 #urxvt.backgroundPixmap: /home/finiks/media/skewed.png\;style=root-tiled
 #urxvt.borderColor:      #121212

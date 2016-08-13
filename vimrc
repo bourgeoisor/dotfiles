@@ -68,9 +68,11 @@ autocmd FileType html,css,ruby,eruby,javascript setlocal shiftwidth=2 tabstop=2 
 
 " colorscheme monokai
 
-" set background=dark
+set background=dark
 let g:hybrid_use_Xresources = 1 
-colorscheme hybrid
+" colorscheme hybrid
 " colorscheme material-theme
+colorscheme solarized
+
 
 " let g:Powerline_symbols = 'fancy'
