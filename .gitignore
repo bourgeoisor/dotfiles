@@ -20,6 +20,7 @@ config/MusicBrainz
 config/pulse
 config/QtProject.conf
 config/qutebrowser/bookmarks
+config/qutebrowser/qsettings/QtProject.conf
 config/ranger
 config/Risk_of_Rain
 config/rncbc.org
