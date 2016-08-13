@@ -62,6 +62,7 @@ yaourt -S mpdas
 yaourt -S rxvt-unicode-pixbuf
 yaourt -S rtorrent-color
 yaourt -S qutebrowser
+yaourt -S xcursor-openzone
 
 echo
 echo "Cloning oh-my-zsh..."
