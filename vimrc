@@ -7,9 +7,10 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
+filetype plugin on
 
 syntax on
-set number
+set relativenumber
 set ruler
 set autoread
 set lazyredraw
@@ -41,38 +42,31 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Text Wrapping
 function s:setWrapping()
     set wrap
     set wm=2
     set textwidth=100
 endfunction
 
+" Filetype Specific
 au BufNewFile,BufRead *.txt call s:setWrapping()
 au BufNewFile,BufRead *.ejs set filetype=html
+autocmd FileType html,css,ruby,eruby,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Misc
 set nocp
 set t_vb=
-filetype plugin on
-set nocompatible
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
 
+" Alias
 map <F2> :NERDTreeToggle<CR>
 
-autocmd FileType html,css,ruby,eruby,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
-" let g:hybrid_use_Xresources = 1
-" colorscheme hybrid
-
-" colorscheme monokai
-
+" Color Scheme
 set background=dark
-let g:hybrid_use_Xresources = 1 
-" colorscheme hybrid
-" colorscheme material-theme
 colorscheme solarized
 
-
-" let g:Powerline_symbols = 'fancy'
+let g:Powerline_theme='default'
+let g:Powerline_colorscheme='solarized16'

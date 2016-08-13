@@ -1,3 +1,6 @@
+" Authors:
+"   @skwp
+"
 " Disabled:
 " Add the following line into the first theme group to see the highlight
 " group
@@ -5,7 +8,7 @@
 "
 " Line info taken out - I know which line number I'm on from the gutter
 "\ , 'lineinfo'
-let g:Powerline#Themes#skwp#theme = Pl#Theme#Create(
+let g:Powerline#Themes#solarized256#theme = Pl#Theme#Create(
 	\ Pl#Theme#Buffer(''
 		\ , 'fugitive:branch'
 		\ , 'fileinfo'
@@ -39,7 +42,7 @@ let g:Powerline#Themes#skwp#theme = Pl#Theme#Create(
 		\ , Pl#Segment#Split()
 	\ ),
 	\
-	\ Pl#Theme#Buffer('ft_help'
+	\ Pl#Theme#Buffer('bt_help'
 		\ , ['static_str.name', 'Help']
 		\ , 'filename'
 		\ , Pl#Segment#Truncate()
