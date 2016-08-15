@@ -28,7 +28,7 @@ sudo sh -c '{ echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf; }'
 
 echo
 echo "Installing xorg and the WM..."
-sudo pacman -Sy bspwm sxhkd xorg-server xorg-server-utils xorg-xinit xf86-video-intel
+sudo pacman -Sy bspwm sxhkd rxvt-unicode xorg-server xorg-server-utils xorg-xinit xf86-video-intel
 
 echo
 echo "Installing utils..."
@@ -59,7 +59,6 @@ echo "Installing AUR exclusive packages..."
 yaourt -S compton
 yaourt -S lemonbar-git
 yaourt -S mpdas
-yaourt -S rxvt-unicode-pixbuf
 yaourt -S rtorrent-color
 yaourt -S qutebrowser
 yaourt -S xcursor-openzone
