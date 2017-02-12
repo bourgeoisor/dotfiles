@@ -41,6 +41,7 @@ set mat=2
 set nobackup
 set nowritebackup
 set noswapfile
+set noundofile
 
 " Text Wrapping
 function s:setWrapping()
