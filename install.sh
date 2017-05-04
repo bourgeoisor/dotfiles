@@ -71,7 +71,7 @@ echo
 echo "Cloning zsh-syntax-highlighting..."
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-ITEMS="config compton.conf irssi mpdconf ncmpcpp rtorrent.rc vim vimrc Xdefaults xinitrc zshrc"
+ITEMS="config compton.conf irssi mpdconf ncmpcpp rtorrent.rc tmux.conf vim vimrc Xdefaults xinitrc zshrc"
 for ITEM in $ITEMS; do
     echo
     echo "Removing any .$ITEM that might exist..."
