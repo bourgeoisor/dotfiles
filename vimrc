@@ -62,6 +62,9 @@ set laststatus=2
 set encoding=utf-8
 set t_Co=256
 
+" Mappings
+nnoremap <CR> :nohlsearch<CR>
+
 " Alias
 map <F2> :NERDTreeToggle<CR>
 
