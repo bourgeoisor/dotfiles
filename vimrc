@@ -67,7 +67,9 @@ map <F2> :NERDTreeToggle<CR>
 
 " Color Scheme
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+hi LineNr ctermfg=cyan
+hi CursorLineNr cterm=bold ctermfg=cyan
 
 let g:Powerline_theme='default'
 let g:Powerline_colorscheme='solarized16'
