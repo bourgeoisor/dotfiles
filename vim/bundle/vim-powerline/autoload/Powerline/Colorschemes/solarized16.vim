@@ -98,9 +98,9 @@ let g:Powerline#Colorschemes#solarized16#colorscheme= Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo.flags'], {
-		\ 'n': ['base03', ['bold']],
-		\ 'N': ['gray5'],
-		\ 'i': ['base03', ['bold']],
+		\ 'n': ['white', ['bold']],
+		\ 'N': ['white'],
+		\ 'i': ['white', ['bold']],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
