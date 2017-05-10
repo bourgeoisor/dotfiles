@@ -25,7 +25,6 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
-
 function fish_prompt
   set last_status $status
 
@@ -36,4 +35,12 @@ function fish_prompt
   printf '%s ' (__fish_git_prompt)
 
   set_color normal
+end
+
+function fish_reload
+  source ~/.config/fish/config.fish
+end
+
+function ls
+  command ls -FGh $argv
 end
