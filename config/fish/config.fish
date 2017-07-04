@@ -44,3 +44,7 @@ end
 function ls
   command ls -FGh $argv
 end
+
+function mp
+  command mplayer -ass -af scaletempo $argv
+end
