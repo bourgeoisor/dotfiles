@@ -61,6 +61,8 @@ set t_vb=
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " Mappings
 nnoremap <CR> :nohlsearch<CR>
@@ -70,9 +72,10 @@ map <F2> :NERDTreeToggle<CR>
 
 " Color Scheme
 set background=dark
+let g:Powerline_theme='default'
+let g:Powerline_colorscheme='solarized16'
+
 "colorscheme solarized
 hi LineNr ctermfg=cyan
 hi CursorLineNr cterm=bold ctermfg=cyan
 
-let g:Powerline_theme='default'
-let g:Powerline_colorscheme='solarized16'
