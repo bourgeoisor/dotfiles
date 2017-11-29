@@ -53,7 +53,7 @@ endfunction
 " Filetype Specific
 au BufNewFile,BufRead *.txt call s:setWrapping()
 au BufNewFile,BufRead *.ejs set filetype=html
-autocmd FileType html,css,ruby,eruby,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html,css,ruby,eruby,javascript,yaml,yml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Misc
 set nocp
