@@ -22,6 +22,10 @@ shot
 
 `shot s` will only take a screenshot of a selected window.
 
+speedtest
+---------
+`speedtest` will use speedtest.net to check UP/DL speeds.
+
 timer
 -----
 `timer <minutes>` will start a countdown.
