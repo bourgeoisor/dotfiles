@@ -46,7 +46,7 @@ function fish_reload
 end
 
 function ls
-  command ls -FGh $argv
+  command ls -FGh --color $argv
 end
 
 function vi
