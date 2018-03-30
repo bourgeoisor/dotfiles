@@ -56,3 +56,7 @@ end
 function mp
   command mplayer -ass -af scaletempo $argv
 end
+
+function sepflac
+  command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
+end
