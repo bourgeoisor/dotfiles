@@ -25,6 +25,9 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
+# Supress welcome message
+set fish_greeting ""
+
 function fish_prompt
   set last_status $status
 
