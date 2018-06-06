@@ -1,4 +1,4 @@
-#My Dotfiles
+# Dotfiles
 
 This repository contains the entirety of my Linux configuration. It is mainly intended for my own personal usage,
 but feel free to use part or all of the files!
