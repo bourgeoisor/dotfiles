@@ -63,3 +63,33 @@ end
 function sflac
   command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
 end
+
+function setns
+  set context $argv
+  set cluster (kubectl config current-context)
+  kubectl config set-context $cluster --namespace=$context
+end
+
+function ethon
+  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" on
+end
+
+function ethoff
+  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" off
+end
+
+function k
+  kubectl $argv
+end
+
+function ka
+  kubectl $argv --all-namespaces
+end
+
+function h
+  helm $argv
+end
+
+function ha
+  helm $argv --all-namespaces
+end
