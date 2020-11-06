@@ -25,6 +25,7 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
+# Supress welcome message
 set fish_greeting ""
 
 function fish_prompt
@@ -62,9 +63,6 @@ end
 function sflac
   command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
 end
-
-# The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc'; else; . '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc'; end; end
 
 function setns
   set context $argv
