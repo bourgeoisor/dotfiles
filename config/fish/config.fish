@@ -25,6 +25,8 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 
+set fish_greeting ""
+
 function fish_prompt
   set last_status $status
 
@@ -46,7 +48,7 @@ function fish_reload
 end
 
 function ls
-  command ls -FGh --color $argv
+  command ls -FGh $argv
 end
 
 function vi
@@ -59,4 +61,41 @@ end
 
 function sflac
   command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
+end
+
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc'; else; . '/Users/bourgo2/Documents/google-cloud-sdk/path.fish.inc'; end; end
+
+function setns
+  set context $argv
+  set cluster (kubectl config current-context)
+  kubectl config set-context $cluster --namespace=$context
+end
+
+function ethon
+  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" on
+end
+
+function ethoff
+  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" off
+end
+
+function k
+  kubectl $argv
+end
+
+function ka
+  kubectl $argv --all-namespaces
+end
+
+function h
+  helm $argv
+end
+
+function ha
+  helm $argv --all --all-namespaces
+end
+
+function patchf
+  kubectl patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
 end
