@@ -97,3 +97,11 @@ end
 function patchf
   kubectl patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
 end
+
+function ding
+  $argv; echo -en "\007"; osascript -e 'display notification "Your command has finished running!"'
+end
+
+function hi
+  ack --passthru $argv
+end
