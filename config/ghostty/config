@@ -1,0 +1,4 @@
+theme=Monokai Classic
+font-family=Monaco
+font-size=16
+command=/opt/homebrew/bin/fish
