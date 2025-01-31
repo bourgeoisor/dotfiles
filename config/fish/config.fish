@@ -28,6 +28,12 @@ set __fish_git_prompt_char_upstream_behind '↓'
 # Supress welcome message
 set fish_greeting ""
 
+# Path fixes
+fish_add_path /Library/Frameworks/Python.framework/Versions/3.11/bin/
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+
+# Functions
 function fish_prompt
   set last_status $status
 
