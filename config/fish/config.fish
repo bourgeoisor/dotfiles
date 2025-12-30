@@ -29,9 +29,9 @@ set __fish_git_prompt_char_upstream_behind '↓'
 set fish_greeting ""
 
 # Path fixes
-fish_add_path /Library/Frameworks/Python.framework/Versions/3.11/bin/
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
+fish_add_path /Users/obourgeois/.local/bin
 
 # Functions
 function fish_prompt

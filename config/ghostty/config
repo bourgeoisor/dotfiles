@@ -1,4 +1,3 @@
-theme=Ayu Mirage
 font-family=Monaco
 font-size=16
-command=/opt/homebrew/bin/fish
+command=/opt/homebrew/bin/fish --login --interactive
