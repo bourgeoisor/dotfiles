@@ -17,34 +17,21 @@ abbr -a h helm
 abbr -a ha 'helm --all --all-namespaces'
 abbr -a g git
 abbr -a ga 'git add'
+abbr -a gc 'git commit'
 abbr -a gs 'git status'
 abbr -a gp 'git push'
 abbr -a gd 'git diff'
 abbr -a vi vim
 abbr -a nano micro
+abbr -a ls 'eza -F --group-directories-first'
+abbr -a ll 'eza -1lF --icons=always --group-directories-first'
+abbr -a grep 'rg'
+abbr -a find 'fd'
 
 # --- Functions ---
 
 function fish_reload
   source ~/.config/fish/config.fish
-end
-
-# Utils
-
-function ls
-  command eza --classify=always --group-directories-first $argv
-end
-
-function ll
-  command eza --oneline --long --classify=always --icons=always --group-directories-first $argv
-end
-
-function grep
-  command rg $argv
-end
-
-function find
-  command fd $argv
 end
 
 # Media
@@ -56,8 +43,6 @@ end
 function sflac
   command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
 end
-
-# Kubernetes
 
 # Switch Kubernetes Context (Cluster)
 function ktx
@@ -75,6 +60,7 @@ function kns
     end
 end
 
+# Tail logs
 function klog
     set -l pod (kubectl get pods --no-headers | awk '{print $1}' | fzf --height 60% --reverse --preview "kubectl logs --tail=10 {}")
     if test -n "$pod"
@@ -82,11 +68,12 @@ function klog
     end
 end
 
+# Patch resource
 function patchf
   kubectl patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
 end
 
-# Docker
+# Docker Shell
 
 function dshell
     set -l container (docker ps --format "{{.Names}}" | fzf --height 40% --reverse --header "Select Container")
@@ -95,7 +82,7 @@ function dshell
     end
 end
 
-# Git
+# Git Checkout
 
 function gco
     set -l branch (git branch -a | fzf --height 40% --layout=reverse --info=inline --preview 'git log --oneline --graph --color=always -n 10 (string trim (string replace "remotes/origin/" "" {}))' | string trim)
@@ -116,7 +103,7 @@ function ws
     end
 end
 
-# Misc
+# Kill Process
 
 function fkill
     set -l pid (ps -ef | sed 1d | fzf -m --height 50% --reverse --header='[kill:process]' | awk '{print $2}')
