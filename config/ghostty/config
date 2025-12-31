@@ -1,3 +1,15 @@
-font-family="SF Mono"
-font-size=16
-command="/opt/homebrew/bin/fish --login --interactive"
+# --- General Settings ---
+
+command = "/opt/homebrew/bin/fish --login --interactive"
+shell-integration = fish
+term = xterm-ghostty
+copy-on-select = true
+window-padding-x = 10
+window-padding-y = 10
+
+# --- Font ---
+
+font-family = "SFMono Nerd Font"
+font-size = 16
+font-feature = -liga
+font-feature = -calt

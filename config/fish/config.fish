@@ -1,66 +1,52 @@
-set normal (set_color normal)
-set magenta (set_color magenta)
-set yellow (set_color yellow)
-set green (set_color green)
-set red (set_color red)
-set gray (set_color -o black)
+# --- General Settings ---
 
-# Fish git prompt
-set __fish_git_prompt_showcleanstate 'yes'
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'yes'
-set __fish_git_prompt_showuntrackedfiles 'yes'
-set __fish_git_prompt_showupstream 'no'
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_color_upstream_ahead green
-set __fish_git_prompt_color_upstream_behind red
-
-# Status Chars
-set __fish_git_prompt_char_cleanstate '✔'
-set __fish_git_prompt_char_dirtystate '✚'
-set __fish_git_prompt_char_stagedstate '●'
-set __fish_git_prompt_char_invalidstate '✖'
-set __fish_git_prompt_char_untrackedfiles '…'
-set __fish_git_prompt_char_stashstate '↩'
-set __fish_git_prompt_char_upstream_ahead '↑'
-set __fish_git_prompt_char_upstream_behind '↓'
-
-# Supress welcome message
 set fish_greeting ""
 
-# Path fixes
+# --- Paths ---
+
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
-fish_add_path /Users/obourgeois/.local/bin
+fish_add_path "$HOME/.local/bin"
 
-# Functions
-function fish_prompt
-  set last_status $status
+# --- Abbreviations ---
 
-  set_color $fish_color_cwd
-  printf '%s' (prompt_pwd)
-  set_color normal
+abbr -a k kubectl
+abbr -a ka 'kubectl --all-namespaces'
+abbr -a kns 'kubectl config set-context --current --namespace'
 
-  printf '%s ' (__fish_git_prompt)
-
-  set_color normal
-end
-
-function add_to_path --description 'Persistently prepends paths to your PATH'
-  set --universal fish_user_paths $fish_user_paths $argv
-end
+# --- Functions ---
 
 function fish_reload
   source ~/.config/fish/config.fish
 end
 
+# Utils
+
 function ls
-  command ls -FGh $argv
+  command eza --classify=always --group-directories-first $argv
+end
+
+function ll
+  command eza --oneline --long --classify=always --icons=always --group-directories-first $argv
 end
 
 function vi
   command vim $argv
 end
+
+function nano
+  command micro $argv
+end
+
+function grep
+  command rg $argv
+end
+
+function find
+  command fd $argv
+end
+
+# Media
 
 function mp
   command mplayer -ass -af scaletempo $argv
@@ -70,26 +56,19 @@ function sflac
   command shnsplit -t "%n-%t" -f $argv[1] -o flac $argv[2]
 end
 
+# Kubernetes
+
 function setns
   set context $argv
   set cluster (kubectl config current-context)
   kubectl config set-context $cluster --namespace=$context
 end
 
-function ethon
-  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" on
-end
-
-function ethoff
-  networksetup -setnetworkserviceenabled "USB 10/100/1000 LAN" off
-end
-
-function k
-  kubectl $argv
-end
-
-function ka
-  kubectl $argv --all-namespaces
+function fns
+    set ns (kubectl get namespaces -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' | fzf)
+    if test -n "$ns"
+        kubectl config set-context --current --namespace=$ns
+    end
 end
 
 function h
@@ -104,10 +83,8 @@ function patchf
   kubectl patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
 end
 
-function ding
-  $argv; echo -en "\007"; osascript -e 'display notification "Your command has finished running!"'
-end
+# --- Extensions ---
 
-function hi
-  ack --passthru $argv
-end
+zoxide init fish | source
+fzf --fish | source
+starship init fish | source
