@@ -12,7 +12,12 @@ fish_add_path "$HOME/.local/bin"
 
 abbr -a k kubectl
 abbr -a ka 'kubectl --all-namespaces'
+abbr -a kg 'kubectl get'
+abbr -a kga 'kubectl get all --all-namespaces'
+abbr -a kdp 'kubectl describe pod'
 abbr -a kns 'kubectl config set-context --current --namespace'
+abbr -a kl 'kubectl logs -f'
+abbr -a kex 'kubectl exec -it'
 abbr -a h helm
 abbr -a ha 'helm --all --all-namespaces'
 abbr -a g git
@@ -20,13 +25,22 @@ abbr -a ga 'git add'
 abbr -a gc 'git commit'
 abbr -a gs 'git status'
 abbr -a gp 'git push'
+abbr -a gpl 'git pull'
 abbr -a gd 'git diff'
+abbr -a gcb 'git checkout -b'
+abbr -a gcm 'git checkout main'
+abbr -a gl "git log --graph --oneline --decorate"
+abbr -a gsw 'git switch'
 abbr -a vi vim
 abbr -a nano micro
 abbr -a ls 'eza -F --group-directories-first'
 abbr -a ll 'eza -1lF --icons=always --group-directories-first'
 abbr -a grep 'rg'
 abbr -a find 'fd'
+abbr -a ... 'cd ../..'
+abbr -a .... 'cd ../../..'
+abbr -a mkdir 'mkdir -p'
+abbr -a ports 'sudo lsof -iTCP -sTCP:LISTEN -P'
 
 # --- Functions ---
 
@@ -61,7 +75,7 @@ function kns
 end
 
 # Tail logs
-function klog
+function klogs
     set -l pod (kubectl get pods --no-headers | awk '{print $1}' | fzf --height 60% --reverse --preview "kubectl logs --tail=10 {}")
     if test -n "$pod"
         kubectl logs -f $pod
