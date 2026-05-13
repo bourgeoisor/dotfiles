@@ -10,14 +10,14 @@ fish_add_path "$HOME/.local/bin"
 
 # --- Abbreviations ---
 
-abbr -a k kubectl
-abbr -a ka 'kubectl --all-namespaces'
-abbr -a kg 'kubectl get'
-abbr -a kga 'kubectl get all --all-namespaces'
-abbr -a kdp 'kubectl describe pod'
-abbr -a kns 'kubectl config set-context --current --namespace'
-abbr -a kl 'kubectl logs -f'
-abbr -a kex 'kubectl exec -it'
+abbr -a k kubecolor
+abbr -a ka 'kubecolor --all-namespaces'
+abbr -a kg 'kubecolor get'
+abbr -a kga 'kubecolor get all --all-namespaces'
+abbr -a kdp 'kubecolor describe pod'
+abbr -a kns 'kubecolor config set-context --current --namespace'
+abbr -a kl 'kubecolor logs -f'
+abbr -a kex 'kubecolor exec -it'
 abbr -a h helm
 abbr -a ha 'helm --all --all-namespaces'
 abbr -a g git
@@ -60,31 +60,31 @@ end
 
 # Switch Kubernetes Context (Cluster)
 function ktx
-    set -l ctx (kubectl config get-contexts -o name | fzf --height 40% --reverse --header "Select Context")
+    set -l ctx (kubecolor config get-contexts -o name | fzf --height 40% --reverse --header "Select Context")
     if test -n "$ctx"
-        kubectl config use-context $ctx
+        kubecolor config use-context $ctx
     end
 end
 
 # Switch Kubernetes Namespace
 function kns
-    set -l ns (kubectl get namespaces -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' | fzf --height 40% --reverse --header "Select Namespace")
+    set -l ns (kubecolor get namespaces -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' | fzf --height 40% --reverse --header "Select Namespace")
     if test -n "$ns"
-        kubectl config set-context --current --namespace=$ns
+        kubecolor config set-context --current --namespace=$ns
     end
 end
 
 # Tail logs
 function klogs
-    set -l pod (kubectl get pods --no-headers | awk '{print $1}' | fzf --height 60% --reverse --preview "kubectl logs --tail=10 {}")
+    set -l pod (kubecolor get pods --no-headers | awk '{print $1}' | fzf --height 60% --reverse --preview "kubecolor logs --tail=10 {}")
     if test -n "$pod"
-        kubectl logs -f $pod
+        kubecolor logs -f $pod
     end
 end
 
 # Patch resource
 function patchf
-  kubectl patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
+  kubecolor patch --type merge -p '{"metadata":{"finalizers": null}}' $argv
 end
 
 # Docker Shell
