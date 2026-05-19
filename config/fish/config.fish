@@ -1,6 +1,7 @@
 # --- General Settings ---
 
 set fish_greeting ""
+set -gx CLOUDSDK_CONTEXT_AWARE_USE_CLIENT_CERTIFICATE false
 
 # --- Paths ---
 
@@ -10,14 +11,16 @@ fish_add_path "$HOME/.local/bin"
 
 # --- Abbreviations ---
 
-abbr -a k kubecolor
-abbr -a ka 'kubecolor --all-namespaces'
-abbr -a kg 'kubecolor get'
-abbr -a kga 'kubecolor get all --all-namespaces'
-abbr -a kdp 'kubecolor describe pod'
-abbr -a kns 'kubecolor config set-context --current --namespace'
-abbr -a kl 'kubecolor logs -f'
-abbr -a kex 'kubecolor exec -it'
+alias kubectl="kubecolor"
+abbr -a k kubectl
+abbr -a ka 'kubectl --all-namespaces'
+abbr -a kg 'kubectl get'
+abbr -a kga 'kubectl get all --all-namespaces'
+abbr -a kd 'kubectl describe'
+abbr -a kdp 'kubectl describe pod'
+abbr -a kns 'kubectl config set-context --current --namespace'
+abbr -a kl 'kubectl logs -f'
+abbr -a kex 'kubectl exec -it'
 abbr -a h helm
 abbr -a ha 'helm --all --all-namespaces'
 abbr -a g git
@@ -33,8 +36,8 @@ abbr -a gl "git log --graph --oneline --decorate"
 abbr -a gsw 'git switch'
 abbr -a vi vim
 abbr -a nano micro
-abbr -a ls 'eza -F --group-directories-first'
-abbr -a ll 'eza -1lF --icons=always --group-directories-first'
+alias ls='eza -F --group-directories-first'
+alias ll='eza -1lF --icons=always --group-directories-first'
 abbr -a grep 'rg'
 abbr -a find 'fd'
 abbr -a ... 'cd ../..'
