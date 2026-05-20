@@ -1,42 +1,23 @@
+![GitHub License](https://img.shields.io/github/license/bourgeoisor/dotfiles)
+
 # My Dotfiles
 
-This repository contains the entirety of my Linux configuration. It is mainly intended for my own personal usage,
-but feel free to use part or all of the files!
+These are my personal dotfiles, customized for a modern development environment on macOS and Unix systems using Fish, Ghostty, and Tmux. Feel free to use them or borrow bits and pieces for your own setup!
 
-Usage
------
+## Installation
 
-Firstly, clone the repository.
+To install, clone this repository and run the setup script:
 
-    git clone git://github.com/finiks/dotfiles.git
-    
-Then, change your working directory into the cloned repository.
+```bash
+git clone https://github.com/bourgeoisor/dotfiles
+cd dotfiles
+./install.sh
+```
 
-    cd dotfiles
-    
-Finally, run the install script.
+_**Note:** Running the installation script will symlink these configuration files into your home directory (e.g., `~/.tmux.conf`). If you have existing files there, the script will back them up to `~/.dotfiles_backup/` before linking, but it's always a good idea to back up important files beforehand._
 
-    ./install.sh
+## Repository structure
 
-**Warning:** this process will overwrite any existing configuration files and possibly install unwanted applications.
-If your goal is to only install some configuration files, it would be wiser to manually link them to your home directory.
-
-For instance, to only install the compton configuration file, one could run the following.
-
-    ln -s compton.conf ~/.compton.conf
-
-My Setup
---------
-
-- iTerm2
-- Homebrew
-- IntelliJ
-- Postman
-- Evernote
-- VSCode
-
-- htop
-- vim
-- tree
-- tmux
-- fish
+*   `install.sh`: The installer script that creates symbolic links in your home directory.
+*   `config/`: Configuration directories for active applications:
+*   `legacy/`: Historical configurations for my old Linux/X11 setups (e.g., AwesomeWM, BSPWM, Compton, Irssi, Ncmpcpp, Zsh, etc.).

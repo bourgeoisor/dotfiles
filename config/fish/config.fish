@@ -134,3 +134,7 @@ end
 zoxide init fish | source
 fzf --fish | source
 starship init fish | source
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/finiks/.local/bin" $PATH
