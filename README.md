@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/bourgeoisor/dotfiles)
+![GitHub License](https://img.shields.io/github/license/olivi-eh/dotfiles)
 
 # My Dotfiles
 
@@ -9,7 +9,7 @@ These are my personal dotfiles, customized for a modern development environment 
 To install, clone this repository and run the setup script:
 
 ```bash
-git clone https://github.com/bourgeoisor/dotfiles
+git clone https://github.com/olivi-eh/dotfiles
 cd dotfiles
 ./install.sh
 ```
